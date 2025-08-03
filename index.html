@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scoreazy Edutech — Counseling & Mentorship</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:700,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- NAV BAR -->
+  <nav class="navbar">
+    <div class="nav-logo">Scoreazy</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#offerings">What We Offer</a></li>
+      <li><a href="#mentors">Mentors</a></li>
+      <li><a href="#book-session">Book Session</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('book-session').scrollIntoView({behavior:'smooth'})">Book a Session</button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="section-hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Unlock Your Potential with Scoreazy</h1>
+        <p>Book powerful mentoring & counseling sessions—where technology, empathy, and expert support meet.</p>
+        <button class="btn-primary" onclick="document.getElementById('book-session').scrollIntoView({behavior:'smooth'})">Get Started</button>
+      </div>
+      <img
+        class="hero-illus"
+        src="./counseling.png"
+        alt="Online Counseling Illustration"
+      />
+    </div>
+  </header>
+
+  <!-- WAVY DIVIDER -->
+  <div class="wave-separator">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,0 Q700,50 1440,0 L1440,80 L0,80 Z" fill="#e3f0fd"/></svg>
+  </div>
+
+  <!-- OFFERINGS -->
+  <section class="container" id="offerings">
+    <h2>What We Offer</h2>
+    <div class="offer-cards">
+      <article class="offer-card">
+        <img
+          src="./Mentorship.png"
+          class="card-illus"
+          alt="Mentorship"
+        />
+        <h3>1-on-1 Mentorship</h3>
+        <p>Personal guidance on academic and career growth with our friendly experts.</p>
+      </article>
+      <article class="offer-card">
+        <img
+          src="./counseling.png"
+          class="card-illus"
+          alt="Counseling"
+        />
+        <h3>Professional Counseling</h3>
+        <p>Certified counselors ready to support your emotional and mental wellness.</p>
+      </article>
+      <article class="offer-card">
+        <img
+          src="./career Guidence.png"
+          class="card-illus"
+          alt="Career Guidance"
+        />
+        <h3>Career Guidance</h3>
+        <p>Test your aptitude and skills to explore what’s next in your learning journey.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ALTERNATE ANGLED DIVIDER -->
+  <div class="angle-separator">
+    <svg viewBox="0 0 1440 40" preserveAspectRatio="none"><polygon points="0,0 1440,40 0,40" fill="#ffd600"/></svg>
+  </div>
+
+  <!-- MENTOR CARDS (Interactive) -->
+  <section class="container mentors" id="mentors">
+    <h2>Meet Our Mentors</h2>
+    <div class="mentor-cards">
+      <article class="mentor-card">
+        <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="Mentor Rahul" class="mentor-pic" />
+        <h4>Rahul Mehra</h4>
+        <p>STEM Specialist</p>
+      </article>
+      <article class="mentor-card">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Mentor Priya" class="mentor-pic" />
+        <h4>Priya Bansal</h4>
+        <p>Counselor & Coach</p>
+      </article>
+      <article class="mentor-card">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Mentor Akash" class="mentor-pic" />
+        <h4>Akash Sen</h4>
+        <p>Career Advisor</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ANGLED DIVIDER FOR BOOKING -->
+  <div class="angle-separator bottom">
+    <svg viewBox="0 0 1440 40" preserveAspectRatio="none"><polygon points="0,40 1440,0 1440,40" fill="#f6faff"/></svg>
+  </div>
+
+  <!-- BOOK SESSION SECTION -->
+  <section class="container book-session" id="book-session">
+    <h2>Book Your Session</h2>
+    <form id="bookingForm" aria-label="Book a Session Form">
+      <label for="nameInput">Full Name *</label>
+      <input type="text" id="nameInput" name="name" required placeholder="Your full name" />
+      <label for="emailInput">Email Address *</label>
+      <input type="email" id="emailInput" name="email" required placeholder="you@example.com" />
+      <label for="serviceSelect">Select Service *</label>
+      <select id="serviceSelect" name="service" required>
+        <option value="" disabled selected>Select a service</option>
+        <option value="Mentorship">1-on-1 Mentorship</option>
+        <option value="Counseling">Professional Counseling</option>
+        <option value="Career Guidance">Career Guidance</option>
+      </select>
+      <label for="dateInput">Preferred Date *</label>
+      <input type="date" id="dateInput" name="date" required min="" />
+      <label for="concernTextarea">Briefly Share Your Concern or Goal</label>
+      <textarea id="concernTextarea" name="concern" placeholder="This helps us match you better"></textarea>
+      <button type="submit" class="btn-primary">Book Now</button>
+    </form>
+    <p id="success-message" class="success-message" role="alert" aria-live="polite">✅ Thank you! Your session booking is received. Our team will contact you soon.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-brand">Scoreazy</div>
+      <p class="footer-desc">Empowering learners with the best in tech-driven mentorship and counseling.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a> | 
+        <a href="#offerings">Offerings</a> | 
+        <a href="#mentors">Mentors</a> | 
+        <a href="mailto:support@scoreazy.com">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 Scoreazy Edutech. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Animate nav on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.navbar');
+      nav.classList.toggle('nav-scrolled', window.scrollY > 10);
+    });
+
+    // Set min date for booking date input
+    const dateInput = document.getElementById('dateInput');
+    dateInput.min = new Date().toISOString().split('T')[0];
+
+    // Booking form simulation
+    const bookingForm = document.getElementById('bookingForm');
+    const successMsg = document.getElementById('success-message');
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      bookingForm.style.display = 'none';
+      successMsg.style.display = 'block';
+      window.scrollTo({ top: successMsg.offsetTop - 100, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
